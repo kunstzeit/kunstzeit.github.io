@@ -1,0 +1,188 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#starmap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+#liveStreamContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: none;
+    z-index: 0;
+}
+
+#liveStream {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+#refreshButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(240, 240, 240, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+    max-width: 90%;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1976D2;
+}
+
+#presets {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.presetButton {
+    background-color: #4CAF50;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+#updateNote {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#toggleButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2196F3;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+    opacity: 0.42;
+    transition: opacity 0.3s ease;
+}
+
+#toggleButton:hover {
+    opacity: 0.7;
+}
+
+#minimizeButton {
+  position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2196F3;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    opacity: 0.42;
+    transition: opacity 0.3s ease;
+}
+
+#minimizeButton:hover {
+    opacity: 0.7;
+}
+
+#fullscreenButton {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0.42;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fullscreenButton:hover {
+    opacity: 0.7;
+}
+
+.fullscreen-icon {
+    font-size: 24px;
+}
+#starmap .starmap_clock,
+#starmap .starmap_position {
+    display: block; /* Default visibility */
+}
+

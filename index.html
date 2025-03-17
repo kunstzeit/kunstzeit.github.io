@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stargazing Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://virtualsky.lco.global/virtualsky.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+</head>
+<body>
+    <div id="starmap"></div>
+    <div id="liveStreamContainer" style="display: none;">
+        <img id="liveStream" src="https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/latest.jpg" alt="GOES-16 Satellite Image">
+        <button id="refreshButton">Refresh</button>
+    </div>
+    <div id="overlay">
+        <input type="text" id="locationInput" placeholder="Location (e.g., Los Angeles)">
+        <input type="date" id="dateInput">
+        <input type="time" id="timeInput">
+        <button id="submitButton">Submit</button>
+        <div id="presets">
+            <button class="presetButton" data-city="Tokyo">Tokyo</button>
+            <button class="presetButton" data-city="Paris">Paris</button>
+            <button class="presetButton" data-city="Dubai">Dubai</button>
+            <button class="presetButton" data-city="New York">New York</button>
+            <button class="presetButton" data-city="GOES-16 Satellite Image">GOES-16 Satellite Image</button>
+        </div>
+        <p id="updateNote">GOES-16 Satellite Image updates approximately every 10 minutes.</p>
+    </div>
+    <button id="toggleButton" style="display: none;">+</button>
+    <button id="minimizeButton" style="display: flex;">-</button>
+    <button id="fullscreenButton" style="display: none;"><span class="fullscreen-icon">⛶</span></button>
+    <script src="script.js"></script>
+</body>
+</html>
